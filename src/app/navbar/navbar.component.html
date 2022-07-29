@@ -68,21 +68,24 @@
         <form [formGroup]="form" class="m-5" (ngSubmit)="onEnviar($event)">
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label"
-              >Email</label
-            >
-            <input
-              formControlName="email"
-              [ngClass]="{
-                'is-invalid': Email?.errors && Email?.touched,
-                'is-valid': !Email?.errors && Email?.touched
-              }"
-              type="email"
-              class="form-control"
-              id="exampleFormControlInput1"
-              placeholder="email"
-              autocomplete="off"
-              required
-            />
+              >Email
+              <input
+                list="gmail"
+                formControlName="email"
+                [ngClass]="{
+                  'is-invalid': Email?.errors && Email?.touched,
+                  'is-valid': !Email?.errors && Email?.touched
+                }"
+                type="email"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="email"
+                autocomplete="off"
+                required
+            /></label>
+            <datalist id="gmail">
+              <option value="admin@gmail.com"></option>
+            </datalist>
             <div *ngIf="Email?.errors && Email?.touched">
               <p *ngIf="Email?.hasError('required')" class="text-danger">
                 Email is required
@@ -94,21 +97,24 @@
           </div>
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label"
-              >Password</label
-            >
-            <input
-              [ngClass]="{
-                'is-invalid': Password?.errors && Password?.touched,
-                'is-valid': !Password?.errors && Password?.touched
-              }"
-              formControlName="password"
-              type="password"
-              class="form-control"
-              id="exampleInputPassword1"
-              placeholder="password"
-              autocomplete="off"
-              required
-            />
+              >Password
+              <input
+                list="contraseña"
+                [ngClass]="{
+                  'is-invalid': Password?.errors && Password?.touched,
+                  'is-valid': !Password?.errors && Password?.touched
+                }"
+                formControlName="password"
+                type="password"
+                class="form-control"
+                id="exampleInputPassword1"
+                placeholder="password"
+                required
+              />
+            </label>
+            <datalist id="contraseña">
+              <option value="12345"></option>
+            </datalist>
             <div *ngIf="Password?.errors && Password?.touched">
               <p
                 *ngIf="Password?.hasError('required')"

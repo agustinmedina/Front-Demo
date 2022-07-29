@@ -5,7 +5,7 @@
   </div>
   <div *ngIf="isloged()" class="text-center">
     <button type="button" class="btn btn-success" (click)="onOpenModal('add')">
-      <a class="nav-link" style="color: rgb(7, 0, 0)"
+      <a class="nav-link" style="color: rgb(255, 255, 255)"
         >Add Education<span class="sr-only">(current)</span></a
       >
     </button>
@@ -23,9 +23,6 @@
     <div
       class="card skill shadow col-lg-12"
       *ngFor="let education of educations"
-      cdkDrag
-      [cdkDragData]="education"
-      cdkDragPreviewContainer="parent"
     >
       <div>
         <div class="col text-center">

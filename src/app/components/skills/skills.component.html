@@ -24,9 +24,6 @@
   <div class="row skill">
     <div
       *ngFor="let skill of skills"
-      cdkDrag
-      [cdkDragData]="skill"
-      cdkDragPreviewContainer="parent"
       class="text-center col-xs-3 col-sm-3 col-md-3 col-lg-3"
     >
       <div class="skillcircle" *ngIf="isloged()">
@@ -49,7 +46,6 @@
       </div>
       <div class="card-body titles">
         <div class="card-title">
-          {{ skill.skillName }}
           <circle-progress
             [percent]="skill.percent"
             [radius]="100"
@@ -284,7 +280,7 @@
 >
   <div class="alert alert-info" role="alert">
     <h4 class="alert-heading">Empty Skills!</h4>
-    <p>Empty Skills</p>
+    <p class="text-dark">Empty Skills</p>
   </div>
 
   <!-- Notification for no data -->

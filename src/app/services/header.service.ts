@@ -7,7 +7,7 @@ import { Info } from '../models/info';
   providedIn: 'root',
 })
 export class HeaderService {
-  private apiServerUrl = 'http://localhost:8080';
+  private apiServerUrl = 'https://portfoliomedina-demo.herokuapp.com';
 
   constructor(private http: HttpClient) {}
 

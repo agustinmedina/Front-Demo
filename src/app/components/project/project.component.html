@@ -25,13 +25,7 @@
       #educationList="cdkDropList"
       class="row mt-2"
     >
-      <div
-        class="card skill shadow col-12"
-        *ngFor="let project of projects"
-        cdkDrag
-        [cdkDragData]="project"
-        cdkDragPreviewContainer="parent"
-      >
+      <div class="card skill shadow col-12" *ngFor="let project of projects">
         <div>
           <div class="col text-center">
             <a
