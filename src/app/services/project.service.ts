@@ -7,7 +7,7 @@ import { Project } from '../models/project';
   providedIn: 'root',
 })
 export class ProjectService {
-  private apiServerUrl = 'https://portfoliomedina-demo.herokuapp.com';
+  private apiServerUrl = 'https://portjwtmedina.herokuapp.com';
 
   constructor(private http: HttpClient) {}
 

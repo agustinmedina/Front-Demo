@@ -8,7 +8,7 @@ import { Skill } from '../models/skill';
   providedIn: 'root',
 })
 export class SkillsService {
-  private apiServerUrl = 'https://portfoliomedina-demo.herokuapp.com';
+  private apiServerUrl = 'https://portjwtmedina.herokuapp.com';
 
   constructor(private http: HttpClient) {}
 
